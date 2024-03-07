@@ -1,11 +1,10 @@
 from flask import Flask, request, render_template
 from langchain.prompts import PromptTemplate
-from langchain.llms import OpenAI
+from langchain_community.llms import OpenAI
 from langchain.chains import LLMChain
 import re
 import os
-from concurrent.futures import thread
-from waitress import serve
+# from waitress import serve
 os.environ["OPENAI_API_KEY"]="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"
 app=Flask(__name__)
 
@@ -80,6 +79,7 @@ def recommend():
     return render_template('index.html')
 
 if __name__=="__main__":
-        serve(app, host='0.0.0.0', port='50100', thread=2, url_prefix="/my-app")
+        app.run(host='0.0.0.0', port=50100, debug=True)
+
 
 
