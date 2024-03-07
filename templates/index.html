@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diet Recommendation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body style="background:rgb(61, 61, 61);color:white">
+    <div class="container mycont mt-5" style="background:rgb(245, 239, 184);color:black;border-radius:15px; padding:10px;">
+        <h1 class="text-center">Diet and Workouts Recommendations</h1>
+
+        <form action="/recommend" method="post">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" class="form-control" id="age" name="age">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select class="form-control" id="gender" name="gender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" class="form-control" id="weight" name="weight">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="height">Height (m):</label>
+                        <input type="number" class="form-control" id="height" name="height" step="0.01">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="veg_or_nonveg">Veg or Non-Veg:</label>
+                        <select class="form-control" id="veg_or_nonveg" name="veg_or_nonveg">
+                            <option value="veg">Veg</option>
+                            <option value="nonveg">Non-Veg</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="disease">Generic Disease:</label>
+                        <input type="text" class="form-control" id="disease" name="disease">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="region">Region (Country and City):</label>
+                        <input type="text" class="form-control" id="region" name="region">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="allergics">Allergics:</label>
+                        <input type="text" class="form-control" id="allergics" name="allergics">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="foodtype">Food Type:</label>
+                <input type="text" class="form-control" id="foodtype" name="foodtype" placeholder="Indian">
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-lrg " style="width:50%; padding:1px;margin-left:20%; margin-top:2%; font-weight:bold">Recommend Diets</button>
+        </form>
+    </div>
+  </body>
