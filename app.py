@@ -5,7 +5,7 @@ from langchain.chains import LLMChain
 import re
 import os
 # from waitress import serve
-os.environ["OPENAI_API_KEY"]="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"
+os.environ["OPENAI_API_KEY"]="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"
 app=Flask(__name__)
 
 
